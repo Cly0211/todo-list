@@ -1,6 +1,4 @@
 <template>
-<div>
-  <p style="color:red">please view my work in a new tab bc this small window doesn't display toaster</p>
   <div class="banner">
     <h4 class="title">
       <el-icon><List /></el-icon>
@@ -8,7 +6,6 @@
       <AddButton class="button" @click="add"></AddButton>
     </h4>
   </div>
-</div>
 </template>
 
 <script>

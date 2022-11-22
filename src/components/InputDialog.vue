@@ -4,7 +4,10 @@
       <template #header="{ close, titleId, titleClass }">
         <div class="my-header">
           <h4 id="titleId" class="titleClass">
-            <el-icon><CirclePlus /></el-icon>
+            <el-icon>
+              <Edit v-if="editInfo" />
+              <CirclePlus v-else />
+            </el-icon>
             {{ editInfo ? 'Edit Task' : 'Add Task' }}
           </h4>
         </div>
@@ -35,7 +38,10 @@
       </el-form>
       <template #footer>
         <el-button type="primary" @click="certain">
-          <el-icon><Edit v-if="editInfo" /><CirclePlus v-else /></el-icon>
+          <el-icon>
+            <Edit v-if="editInfo" />
+            <CirclePlus v-else />
+          </el-icon>
           {{ editInfo ? 'Edit' : 'Add' }}
         </el-button>
         <el-button type="danger" @click="cancel">
